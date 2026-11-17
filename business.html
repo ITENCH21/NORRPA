@@ -26,16 +26,18 @@
       <a href="stories.html">Истории</a>
       <a href="about.html">О бренде</a>
       <a href="stores.html">Магазины</a>
-      <a class="m-only" href="https://shop.norppa.ru/catalog/zhenskaya_odezhda/">Каталог: женщинам</a>
-      <a class="m-only" href="https://shop.norppa.ru/catalog/muzhskaya_odezhda/">Каталог: мужчинам</a>
-      <a class="m-only" href="https://shop.norppa.ru/catalog/detskaya_odezhda/">Каталог: детям и подросткам</a>
+      <a class="m-only" href="catalog.html?cat=women">Каталог: женщинам</a>
+      <a class="m-only" href="catalog.html?cat=men">Каталог: мужчинам</a>
+      <a class="m-only" href="catalog.html?cat=kids">Каталог: детям и подросткам</a>
+      <a class="m-only" href="cart.html" data-cart-count>Корзина</a>
       <a class="m-only" href="business.html">Бизнесу</a>
       <a class="m-only" href="tel:+78123368777">+7 (812) 336-87-77</a>
     </nav>
     <div class="top-right">
       <a class="tel" href="tel:+78123368777">+7 (812) 336-87-77</a>
       <a class="st-link" href="business.html" aria-current="page">Бизнесу</a>
-      <a class="btn" href="https://shop.norppa.ru/">Каталог</a>
+      <a class="cart-link st-link" href="cart.html" data-cart-count>Корзина</a>
+      <a class="cat-btn" href="catalog.html"><span class="ico" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Каталог<sup>202</sup></a>
       <button class="burger" type="button" id="burger" aria-controls="menu" aria-expanded="false">Меню</button>
     </div>
   </div>
@@ -130,7 +132,8 @@
       <div>
         <h4>Покупателям</h4>
         <ul>
-          <li><a href="https://shop.norppa.ru/">Интернет-магазин</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="cart.html">Корзина</a></li>
           <li><a href="stores.html">Фирменные магазины</a></li>
           <li><a href="bonus.html">Бонусная программа</a></li>
           <li><a href="technologies.html#care">Уход за одеждой</a></li>
@@ -158,13 +161,13 @@
     <div class="word" aria-hidden="true">NORPPA</div>
     <div class="legal">
       <span>ООО «Гармония «АЛЬКОР», ИНН 7804507308, ОГРН 1137847158349</span>
-      <span><a href="https://www.norppa.ru/privacy_policy">Политика обработки данных</a> &nbsp; <a href="https://www.norppa.ru/cookie">Cookie</a></span>
+      <span><a href="privacy.html">Политика обработки данных</a> &nbsp; <a href="cookie.html">Cookie</a></span>
     </div>
     <p style="margin-top:12px;font-size:12.5px">Концепт редизайна сайта norppa.ru. Фото и тексты — с сайтов norppa.ru и shop.norppa.ru.</p>
   </div>
 </footer>
 <div class="cookie" id="cookie" role="region" aria-label="Уведомление о cookie">
-  <span>Сайт использует обязательные cookie. Аналитику Яндекс Метрики включим только с вашего согласия. <a href="https://www.norppa.ru/cookie">Подробнее</a></span>
+  <span>Сайт использует обязательные cookie. Аналитику Яндекс Метрики включим только с вашего согласия. <a href="cookie.html">Подробнее</a></span>
   <div><button type="button" id="ck-yes">Разрешить аналитику</button><button type="button" class="alt" id="ck-no">Только обязательные</button></div>
 </div>
 <button class="demo-btn" type="button" id="demo-open" aria-controls="demo" aria-expanded="false">Что изменено</button>
@@ -173,6 +176,7 @@
   <h2>Что изменено</h2>
   <p class="muted" style="font-size:14px">Каждое улучшение закрывает проблему из аудита текущего сайта.</p>
   <ol>
+    <li><b>Свой каталог и корзина</b><span>Каталог из 200 моделей с фильтрами и сортировкой, карточка товара с выбором цвета и размера по наличию, корзина и оформление — в одном стиле с сайтом, без перехода на другой домен.</span></li>
     <li><b>Весь сайт в одном стиле</b><span>Главная, коллекция, технологии, истории, о бренде, магазины, бизнес и бонусы — одна система вместо разрозненных страниц Tilda.</span></li>
     <li><b>Подбор одежды по живой погоде</b><span>Погода в городах фирменных магазинов, анимация дождя, снега и ветра, модели с ценами. Слоган «одежда для реальной погоды» становится функцией.</span></li>
     <li><b>Цены и переход к покупке</b><span>У моделей на главной и в коллекции — цена и ссылка на товар. Сейчас имиджевый сайт почти не ведёт в магазин.</span></li>
@@ -186,6 +190,7 @@
   </ol>
 </aside>
 <script src="assets/site.js"></script>
+<script src="assets/shop.js"></script>
 
 </body>
 </html>
