@@ -65,14 +65,13 @@ p{margin:0}
 .muted{color:var(--fog)}
 .link{font-weight:500;text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;padding-bottom:2px;transition:background-size .35s var(--ease)}
 .link:hover{background-size:0 1px;background-position:100% 100%}
-.btn{display:inline-flex;align-items:center;justify-content:center;font:500 15px/1 var(--font);text-decoration:none;padding:16px 26px;border:1px solid currentColor;border-radius:100px;cursor:pointer;background:transparent;color:inherit;position:relative;overflow:hidden;isolation:isolate;transition:color .35s var(--ease)}
-.btn::before{content:"";position:absolute;inset:0;background:currentColor;transform:translateY(101%);transition:transform .35s var(--ease);z-index:-1}
-.btn:hover::before{transform:none}
-.btn.on-dark:hover{color:var(--granite)}
-.btn.on-light:hover{color:var(--white)}
-.btn.solid{background:var(--white);color:var(--granite);border-color:var(--white)}
-.btn.solid::before{background:var(--granite)}
-.btn.solid:hover{color:var(--white)}
+/* кнопки: заливка снизу при наведении. Цвет заливки (--fill) и текста при наведении (--on) заданы явно для каждого фона */
+.btn{--fill:var(--granite);--on:var(--white);display:inline-flex;align-items:center;justify-content:center;font:500 15px/1 var(--font);text-decoration:none;padding:16px 26px;border:1px solid currentColor;border-radius:100px;cursor:pointer;background:transparent;color:var(--granite);position:relative;overflow:hidden;isolation:isolate;transition:color .35s var(--ease),border-color .35s var(--ease)}
+.btn::before{content:"";position:absolute;inset:-1px;border-radius:inherit;background:var(--fill);transform:translateY(101%);transition:transform .35s var(--ease);z-index:-1}
+.btn:hover,.btn:focus-visible{color:var(--on)!important;border-color:var(--fill)!important}
+.btn:hover::before,.btn:focus-visible::before{transform:none}
+.btn.on-dark{color:var(--white);--fill:var(--white);--on:var(--granite)}
+.btn.solid{background:var(--white);color:var(--granite);border-color:var(--white);--fill:var(--granite);--on:var(--white)}
 
 /* шапка: прозрачная над первым экраном, светлая после */
 header.top{position:fixed;inset:0 0 auto;z-index:30;color:var(--white);transition:background .35s,color .35s,box-shadow .35s}
@@ -84,9 +83,8 @@ header.top .wrap{display:flex;align-items:center;gap:32px;height:68px}
 .menu a:hover{opacity:1}
 .top-right{margin-left:auto;display:flex;align-items:center;gap:22px;font-size:15px}
 .top-right a{text-decoration:none}
-.top-right .btn{padding:11px 18px;font-size:14px}
-.top-right .btn:hover{color:var(--granite)}
-header.top.scrolled .btn:hover{color:var(--white)}
+.top-right .btn{padding:11px 18px;font-size:14px;color:var(--white);--fill:var(--white);--on:var(--granite)}
+header.top.scrolled .top-right .btn,header.top.menu-open .top-right .btn{color:var(--granite);--fill:var(--granite);--on:var(--white)}
 .menu .m-only{display:none}
 .burger{display:none;font:500 15px/1 var(--font);background:none;border:0;color:inherit;cursor:pointer;padding:8px 0}
 @media (max-width:980px){
